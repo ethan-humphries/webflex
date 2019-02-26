@@ -1,0 +1,18 @@
+nav, h2 {
+    background-color: rgb(27, 126, 14);
+}
+
+h2 {
+    text-align: center;
+    margin: 15px;
+}
+
+.container-fluid {
+    width: 85%;
+    float: right;
+    background-color: rgb(243, 125, 194);
+}
+
+* {
+    background-color:rgb(243, 125, 194); 
+}
