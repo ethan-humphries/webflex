@@ -12,13 +12,15 @@ import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter.reducer';
 import { LinksComponent } from './links/links.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { JsonDataService } from './services/json-data.service'
 
 const routes : Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'pageA', component: PageAComponent },
   { path: 'pageB', component: PageBComponent },
   { path: 'pageC', component: PageCComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({
@@ -40,7 +42,9 @@ const routes : Routes = [
     HttpClientModule,
     StoreModule.forRoot({ count: counterReducer })
   ],
-  providers: [],
+  providers: [
+    JsonDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
